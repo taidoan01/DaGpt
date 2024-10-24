@@ -1,5 +1,6 @@
 from langchain_openai import ChatOpenAI
 from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_groq import ChatGroq
 def load_llm(model_name):
     """
     Load Large Language Model
@@ -22,6 +23,12 @@ def load_llm(model_name):
             temperature=0.0,
             max_tokens=1000,
         )  
+    elif model_name=="llama3-70b-8192":
+        return ChatGroq(
+            model=model_name,
+            temperature=0.0,
+            max_tokens=1000,
+        )
     else:
         raise ValueError(
             "Unkown model.\

@@ -11,7 +11,7 @@ from src.models.llms import load_llm
 load_dotenv()
 
 logger = BaseLogger()
-MODEL_NAME =  "gemini-1.5-pro"
+MODEL_NAME =  "llama3-70b-8192"
 
 
 def process_query(da_agent, query):
